@@ -1,5 +1,8 @@
 public class Print1ToMaxOfNDigits {
     public static void print(int n) {
+        if (n <= 0)
+            return;
+
         char[] digits = new char[n + 1];
         for (int i = 0; i <= n; i++) {
             digits[i] = '0';
