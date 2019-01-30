@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 public class KthNodeFromEnd {
     public static ListNode findKthNodeFromEnd(ListNode head, int k) {
+        if (k <= 0)
+            return null;
+            
         ListNode former = head;
         for (int i = 0; i < k; i++) {
             if (former == null)
@@ -22,6 +25,7 @@ public class KthNodeFromEnd {
         System.out.println(findKthNodeFromEnd(head, 1));
         System.out.println(findKthNodeFromEnd(head, 5));
         System.out.println(findKthNodeFromEnd(head, 10));
+        System.out.println(findKthNodeFromEnd(head, -1));
     }
 
     public static void main(String[] args) {
